@@ -705,7 +705,7 @@ select {
 .hero-stat-grid {
   position: relative;
   display: grid;
-  gap: 1.15rem;
+  gap: 1.4rem;
   max-width: 620px;
   margin-left: auto;
 }
@@ -715,13 +715,13 @@ select {
 }
 
 .home-hero-grid .hero-signal-stack {
-  padding-top: 4.5rem;
+  padding-top: 5.1rem;
   width: 100%;
 }
 
 .home-hero-grid .hero-stat-grid {
   width: min(100%, 540px);
-  gap: 1rem;
+  gap: 1.4rem;
 }
 
 .hero-signal-card {
@@ -742,12 +742,12 @@ select {
   width: min(100%, 680px);
   max-width: 620px;
   margin-left: auto;
-  padding: 0.35rem 0;
+  padding: 1.1rem 0 0.35rem;
 }
 
 .applications-bubble-list {
   display: grid;
-  gap: 1.15rem;
+  gap: 1.4rem;
 }
 
 .applications-bubble {
@@ -1160,6 +1160,8 @@ select {
 .feature-card,
 .use-case-card,
 .application-block,
+.hero-signal-card,
+.applications-bubble,
 .contact-card,
 .audience-card,
 .card,
@@ -1183,6 +1185,8 @@ select {
 .use-case-card.reveal.is-visible:hover,
 .application-block:hover,
 .application-block.reveal.is-visible:hover,
+.hero-signal-card:hover,
+.applications-bubble:hover,
 .contact-card:hover,
 .contact-card.reveal.is-visible:hover,
 .audience-card:hover,
