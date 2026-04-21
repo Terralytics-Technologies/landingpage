@@ -556,10 +556,10 @@ select {
 .hero {
   display: flex;
   align-items: stretch;
-  min-height: min(860px, calc(100svh - 8px));
-  margin-top: calc(var(--header-height) + 10px);
+  min-height: min(790px, calc(100svh - 6px));
+  margin-top: calc(var(--header-height) + 6px);
   padding-top: 0;
-  padding-bottom: 34px;
+  padding-bottom: 24px;
   position: relative;
 }
 
@@ -567,15 +567,15 @@ select {
   display: grid;
   align-items: start;
   grid-template-columns: minmax(0, 1.05fr) minmax(360px, 0.95fr);
-  gap: 2.6rem;
-  min-height: min(760px, calc(100svh - var(--header-height) - 24px));
-  padding-top: 0.35rem;
+  gap: 2.2rem;
+  min-height: min(690px, calc(100svh - var(--header-height) - 12px));
+  padding-top: 0.1rem;
   position: relative;
 }
 
 .hero-copy {
   z-index: 1;
-  padding: 0.15rem 0 2rem;
+  padding: 0 0 1rem;
 }
 
 .home-hero-grid {
@@ -583,13 +583,13 @@ select {
 }
 
 .home-hero-grid .hero-copy {
-  padding-top: 1.2rem;
+  padding-top: 0.35rem;
 }
 
 .hero-copy .section-title {
   max-width: 10ch;
-  font-size: clamp(3rem, 6vw, 5.4rem);
-  line-height: 0.97;
+  font-size: clamp(2.6rem, 5.3vw, 4.85rem);
+  line-height: 0.95;
 }
 
 .hero-mark {
@@ -614,7 +614,7 @@ select {
 }
 
 .hero-signal-stack {
-  padding-top: 3.9rem;
+  padding-top: 2rem;
 }
 
 .hero-visual-stage {
@@ -715,7 +715,7 @@ select {
 }
 
 .home-hero-grid .hero-signal-stack {
-  padding-top: 7.25rem;
+  padding-top: 4.5rem;
   width: 100%;
 }
 
@@ -825,7 +825,7 @@ select {
 
 .hero-lede {
   max-width: 64ch;
-  font-size: 1.12rem;
+  font-size: 1.02rem;
 }
 
 .hero-shell {
@@ -835,7 +835,7 @@ select {
 .scroll-cue {
   position: absolute;
   left: 50%;
-  bottom: 6px;
+  bottom: 0;
   z-index: 3;
   width: 54px;
   height: 54px;
