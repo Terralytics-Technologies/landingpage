@@ -28,11 +28,13 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: clip;
 }
 
 body {
   margin: 0;
   min-width: 320px;
+  overflow-x: clip;
   color: var(--text);
   background:
     radial-gradient(circle at 10% 12%, rgba(155, 235, 240, 0.34), transparent 0 22%),
@@ -190,6 +192,15 @@ select {
 .container {
   width: min(calc(100% - 3rem), var(--container));
   margin: 0 auto;
+}
+
+.container > *,
+.grid-2 > *,
+.grid-3 > *,
+.grid-4 > *,
+.hero-grid > *,
+.contact-cards > * {
+  min-width: 0;
 }
 
 .section {
@@ -726,6 +737,9 @@ select {
 
 .hero-signal-card {
   min-height: 0;
+  transform: translate3d(0, 0, 0);
+  transition: transform var(--transition), border-color var(--transition), box-shadow var(--transition);
+  will-change: transform;
 }
 
 .applications-hero-visual {
@@ -758,6 +772,9 @@ select {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  transform: translate3d(0, 0, 0);
+  transition: transform var(--transition), border-color var(--transition), box-shadow var(--transition);
+  will-change: transform;
 }
 
 .applications-bubble:nth-child(1) {
@@ -1186,7 +1203,9 @@ select {
 .application-block:hover,
 .application-block.reveal.is-visible:hover,
 .hero-signal-card:hover,
+.hero-signal-card.reveal.is-visible:hover,
 .applications-bubble:hover,
+.applications-bubble.reveal.is-visible:hover,
 .contact-card:hover,
 .contact-card.reveal.is-visible:hover,
 .audience-card:hover,
@@ -1441,6 +1460,7 @@ select {
     linear-gradient(180deg, rgba(255, 255, 255, 0.13), rgba(255, 255, 255, 0.03)),
     rgba(255, 255, 255, 0.02);
   border: 1px solid rgba(198, 241, 244, 0.1);
+  overflow-wrap: anywhere;
 }
 
 .contact-meta li::before {
@@ -1599,6 +1619,11 @@ select {
     padding: 60px 0;
   }
 
+  .section:not(.hero):not(.contact-page-intro)::before {
+    inset: 12px 0.6rem;
+    border-radius: 24px;
+  }
+
   .header-inner {
     min-height: var(--header-height);
   }
@@ -1657,6 +1682,26 @@ select {
     min-height: auto;
   }
 
+  .hero-copy .section-title,
+  .section-title,
+  .hero-lede,
+  .section-subtitle,
+  .copy,
+  .highlight-line,
+  .hero-stat strong,
+  .hero-stat span,
+  .applications-bubble strong,
+  .applications-bubble span,
+  .contact-card h3,
+  .contact-bio,
+  .application-block h3,
+  .application-meta p,
+  .application-meta li,
+  .contact-meta li {
+    overflow-wrap: anywhere;
+    word-break: normal;
+  }
+
   .applications-bubble,
   .applications-bubble:nth-child(1),
   .applications-bubble:nth-child(2),
@@ -1697,8 +1742,13 @@ select {
     grid-template-columns: 1fr;
   }
 
+  .profile {
+    justify-items: start;
+  }
+
   .contact-meta {
     grid-template-columns: 1fr;
+    max-width: 100%;
   }
 
   .avatar-photo {
