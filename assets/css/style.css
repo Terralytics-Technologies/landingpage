@@ -1202,10 +1202,6 @@ select {
 .use-case-card.reveal.is-visible:hover,
 .application-block:hover,
 .application-block.reveal.is-visible:hover,
-.hero-signal-card:hover,
-.hero-signal-card.reveal.is-visible:hover,
-.applications-bubble:hover,
-.applications-bubble.reveal.is-visible:hover,
 .contact-card:hover,
 .contact-card.reveal.is-visible:hover,
 .audience-card:hover,
@@ -1213,6 +1209,15 @@ select {
   z-index: 3;
   transform: translate3d(0, -12px, 0);
   box-shadow: 0 42px 98px rgba(0, 10, 28, 0.5);
+}
+
+.hero-signal-card:hover,
+.hero-signal-card.reveal.is-visible:hover,
+.applications-bubble:hover,
+.applications-bubble.reveal.is-visible:hover {
+  z-index: 3;
+  transform: translate3d(0, -5px, 0);
+  box-shadow: 0 24px 56px rgba(0, 10, 28, 0.3);
 }
 
 .panel:hover,
