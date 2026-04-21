@@ -202,7 +202,7 @@ select {
 }
 
 .section:first-of-type {
-  padding-top: calc(var(--header-height) + 10px);
+  padding-top: calc(var(--header-height) + 2px);
 }
 
 .section + .section {
@@ -557,7 +557,7 @@ select {
   display: flex;
   align-items: stretch;
   min-height: min(860px, calc(100svh - 8px));
-  margin-top: calc(var(--header-height) + 22px);
+  margin-top: calc(var(--header-height) + 10px);
   padding-top: 0;
   padding-bottom: 34px;
   position: relative;
@@ -1319,7 +1319,7 @@ select {
   display: flex;
   align-items: center;
   min-height: calc(100svh - 10px);
-  margin-top: calc(var(--header-height) + 22px);
+  margin-top: calc(var(--header-height) + 10px);
   padding-top: 0;
   padding-bottom: 40px;
 }
@@ -1632,7 +1632,7 @@ select {
   .hero,
   .contact-page-intro {
     min-height: auto;
-    margin-top: calc(var(--header-height) + 16px);
+    margin-top: calc(var(--header-height) + 8px);
     padding-top: 0;
     padding-bottom: 28px;
   }
