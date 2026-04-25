@@ -16,7 +16,7 @@ export function StickyHeader(currentPage) {
     <header class="site-header" data-header>
       <div class="container header-inner">
         <a class="brand" href="index.html" aria-label="Terralytics home">
-          <img src="assets/images/terralytics-logo-horizontal.png" alt="Terralytics" />
+          <img src="assets/images/newterralyticslogo.png" alt="Terralytics" />
         </a>
         <nav class="nav" aria-label="Primary">
           ${getNavLinks(currentPage)}
